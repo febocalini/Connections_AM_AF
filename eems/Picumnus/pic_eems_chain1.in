@@ -1,0 +1,9 @@
+datapath = /Users/imac/Desktop/eems_artigo2/pic_eems/pic_eems
+mcmcpath = /Users/imac/Desktop/eems_artigo2/pic_eems/d200/output_run1
+nIndiv = 16
+nSites = 3839
+nDemes = 200
+diploid = true
+numMCMCIter = 20000000
+numBurnIter = 1000000
+numThinIter = 9999

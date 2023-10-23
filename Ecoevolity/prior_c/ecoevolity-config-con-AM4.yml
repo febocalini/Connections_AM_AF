@@ -1,0 +1,66 @@
+---
+event_model_prior:
+    dirichlet_process:
+        parameters:
+            concentration:
+                value: 9.71475
+                estimate: true
+                prior:
+                    gamma_distribution:
+                        shape: 3.5
+                        scale: 0.251253
+
+event_time_prior:
+    gamma_distribution:
+        shape: 2.0
+        scale: 0.005
+
+mcmc_settings:
+    chain_length: 50000
+    sample_frequency: 50
+
+global_comparison_settings:
+    ploidy: 2
+    genotypes_are_diploid: true
+    markers_are_dominant: false
+    population_name_delimiter: " "
+    population_name_is_prefix: false
+    constant_sites_removed: false
+    equal_population_sizes: false
+    parameters:
+        population_size:
+            value: 0.002
+            estimate: true
+            prior:
+                gamma_distribution:
+                    shape: 5.0
+                    scale: 0.0004
+                    offset: 0.0
+        root_relative_population_size:
+            value: 1.0
+            estimate: true
+            prior:
+                gamma_distribution:
+                    shape: 100.0
+                    scale: 0.01
+                    offset: 0.0
+        freq_1:
+            value: 0.5
+            estimate: false
+
+        mutation_rate:
+            value: 1.0
+            estimate: false
+
+comparisons:
+- comparison:
+    path: "nexus_files/cary_ecoevo.nex"
+- comparison:
+    path: "nexus_files/hemi_ecoevo.nex"
+- comparison:
+    path: "nexus_files/pic_ecoevo2.nex"
+- comparison:
+    path: "nexus_files/tha_ecoevo.nex"
+
+
+
